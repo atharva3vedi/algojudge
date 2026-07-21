@@ -1,0 +1,72 @@
+<svg width="1200" height="620" viewBox="0 0 1200 620" xmlns="http://www.w3.org/2000/svg" font-family="SFMono-Regular, Consolas, monospace">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#5c6370"/>
+    </marker>
+    <linearGradient id="panelBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b1f28"/>
+      <stop offset="100%" stop-color="#161a22"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="#0f1115"/>
+  <text x="600" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#f2f4f8">System Architecture</text>
+
+  <!-- Client -->
+  <g>
+    <rect x="40" y="80" width="230" height="120" rx="12" fill="url(#panelBg)" stroke="#61dafb" stroke-width="1.5"/>
+    <text x="155" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#61dafb">React Client</text>
+    <text x="155" y="132" text-anchor="middle" font-size="11.5" fill="#9aa2b1">Problem list &amp; editor</text>
+    <text x="155" y="150" text-anchor="middle" font-size="11.5" fill="#9aa2b1">axios + JWT storage</text>
+    <text x="155" y="168" text-anchor="middle" font-size="11.5" fill="#9aa2b1">react-router-dom</text>
+  </g>
+
+  <!-- API layer -->
+  <g>
+    <rect x="360" y="80" width="260" height="120" rx="12" fill="url(#panelBg)" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="490" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#4ade80">Django REST API</text>
+    <text x="490" y="132" text-anchor="middle" font-size="11.5" fill="#9aa2b1">SimpleJWT authentication</text>
+    <text x="490" y="150" text-anchor="middle" font-size="11.5" fill="#9aa2b1">user / questions apps</text>
+    <text x="490" y="168" text-anchor="middle" font-size="11.5" fill="#9aa2b1">CORS-enabled</text>
+  </g>
+
+  <!-- Judge engine -->
+  <g>
+    <rect x="710" y="80" width="270" height="120" rx="12" fill="url(#panelBg)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="845" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#fbbf24">Execution Engine</text>
+    <text x="845" y="132" text-anchor="middle" font-size="11.5" fill="#9aa2b1">subprocess: gcc / g++</text>
+    <text x="845" y="150" text-anchor="middle" font-size="11.5" fill="#9aa2b1">javac + java · python3</text>
+    <text x="845" y="168" text-anchor="middle" font-size="11.5" fill="#9aa2b1">per-submission uuid sandbox file</text>
+  </g>
+
+  <!-- DB -->
+  <g>
+    <rect x="360" y="260" width="260" height="110" rx="12" fill="url(#panelBg)" stroke="#818cf8" stroke-width="1.5"/>
+    <text x="490" y="288" text-anchor="middle" font-size="14" font-weight="700" fill="#a5b4fc">SQLite Database</text>
+    <text x="490" y="312" text-anchor="middle" font-size="11.5" fill="#9aa2b1">Question · TestCase</text>
+    <text x="490" y="330" text-anchor="middle" font-size="11.5" fill="#9aa2b1">Solution (verdict log)</text>
+  </g>
+
+  <!-- Testcase store -->
+  <g>
+    <rect x="710" y="260" width="270" height="110" rx="12" fill="url(#panelBg)" stroke="#f472b6" stroke-width="1.5"/>
+    <text x="845" y="288" text-anchor="middle" font-size="14" font-weight="700" fill="#f9a8d4">Testcase Storage</text>
+    <text x="845" y="312" text-anchor="middle" font-size="11.5" fill="#9aa2b1">testcaseinput/ · testcaseoutput/</text>
+    <text x="845" y="330" text-anchor="middle" font-size="11.5" fill="#9aa2b1">InputCodes/ · Output/</text>
+  </g>
+
+  <!-- Docker footer -->
+  <rect x="40" y="430" width="940" height="80" rx="12" fill="none" stroke="#2a2f3a" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="60" y="460" font-size="13" font-weight="700" fill="#38bdf8">Dockerfile</text>
+  <text x="60" y="480" font-size="11.5" fill="#9aa2b1">Bundles Python, GCC/G++, and the JDK so submitted code compiles &amp; runs the same way in every environment</text>
+
+  <!-- arrows -->
+  <line x1="270" y1="140" x2="358" y2="140" stroke="#5c6370" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="140" x2="708" y2="140" stroke="#5c6370" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="490" y1="200" x2="490" y2="258" stroke="#5c6370" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="845" y1="200" x2="845" y2="258" stroke="#5c6370" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="315" x2="708" y2="315" stroke="#5c6370" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="600" y="580" text-anchor="middle" font-size="12" fill="#5c6370">request/response</text>
+  <text x="600" y="600" text-anchor="middle" font-size="11" fill="#3f4552">JWT-secured JSON over HTTPS</text>
+</svg>
